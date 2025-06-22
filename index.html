@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ali's Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <h1 class="logo">Ali's Portfolio</h1>
+      <ul class="nav-links">
+        <li><a href="#" onclick="showSection('home')">Home</a></li>
+        <li><a href="#" onclick="showSection('videos')">Videos</a></li>
+        <li><a href="#" onclick="showSection('images')">Images</a></li>
+        <li><a href="#" onclick="showSection('achievements')">Achievements</a></li>
+        <li><a href="#" onclick="showSection('resume')">Resume</a></li>
+        <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+
+    <!-- HOME / PROFILE SECTION -->
+    <section id="home" class="section">
+      <div class="home-grid">
+        <div class="left-side">
+          <img src="mypic.jpg" alt="Profile Picture" class="profile-pic" />
+        </div>
+        <div class="right-side">
+          <h2 class="username">Mohammad Ali</h2>
+          <p class="intro">Aspiring Software Engineer | B.Tech @ GEHU <br> Passionate about development, projects, and innovation.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEOS SECTION -->
+    <section id="videos" class="section hidden">
+      <h2>Videos</h2><br><br>
+      <h3>My Introductory Video:-</h3><br>
+      <video controls width="500">
+        <source src="Introduction.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <!-- IMAGES SECTION -->
+    <section id="images" class="section hidden">
+      <h2>Images</h2><br><br>
+      <h4>No Images Posted...</h4>
+    </section>
+
+    <!-- ACHIEVEMENTS SECTION -->
+    <section id="achievements" class="section hidden">
+      <h2>Achievements</h2><br>
+      <ul>
+        <li>🏆 Developed an OS-operated Task Management System</li>
+        <li>💡 Built a Compiler Project with TAC & Optimization</li>
+        <li>📜 1 research paper published in IEEE conference</li>
+      </ul>
+      <br><br><h2>Certificates</h2>
+      <iframe src="Coursera Certificate 6th Sem.pdf" width="45%" height="300px" style="border: none;"></iframe>
+    </section>
+
+    <!-- RESUME SECTION -->
+    <section id="resume" class="section hidden">
+      <h2>Resume</h2><br><br>
+      <iframe src="Mohammad Ali_Resume.pdf" width="100%" height="600px" style="border: none;"></iframe>
+    </section>
+
+    <section id="contact" class="section hidden">
+        <h2>Contact</h2><br><br>
+        <ul>
+            <li>Email :- alichoudhry068@gmail.com</li><br>
+            <li>LinkedIn :- <a href="https://www.linkedin.com/in/mohammad-ali-1bb740353?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">Mohammad Ali</a></li><br>
+            <li>GitHub :- </li><br>
+        </ul>
+    </section>
+
+  </main>
+
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach((section) => {
+        section.classList.add('hidden');
+      });
+      document.getElementById(id).classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
